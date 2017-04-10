@@ -1,3 +1,1 @@
-'use strict';var mongoose = require('mongoose');var Schema = mongoose.Schema;
-var TaskSchema = new Schema({  name: {    type: String,    Required: 'Kindly enter the name of the task'  },  Created_date: {    type: Date,    default: Date.now  },  status: {    type: [{      type: String,      enum: ['pending', 'ongoing', 'completed']    }],    default: ['pending']  }});
-module.exports = mongoose.model('Tasks', TaskSchema);
+{  "name": "todolistapi",  "version": "1.0.0",  "description": "create an API for todo items",  "main": "index.js",  "scripts": {    "test": "echo \"Error: no test specified\" && exit 1"  },  "keywords": [    "API",    "todolist",    "remainder"  ],  "author": "Mamatha",  "license": "ISC",  "dependencies": {    "body-parser": "^1.17.1",    "express": "^4.15.2",    "mongoose": "^4.9.4",    "nodemon": "^1.11.0"  },  "start": "nodemon server.js"}
